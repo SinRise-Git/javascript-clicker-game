@@ -1,0 +1,119 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  resize: none;
+}
+
+
+.div-grid-l{
+  display: grid;
+  grid-template-areas: 
+   'kolonne kolonne ' ;
+  grid-gap: 100px;
+  padding: 50px 50px 35px 50px;
+  margin: 100px 800px 100px 800px;
+  text-align: center;
+  align-content: center;
+  width: 90%;
+}
+
+
+.box{
+    background: #6ac5ce;
+    padding: 50px 50px 2px 50px;
+    margin: 100px 600px 100px 600px;
+    color: black;
+    border: 2px solid black;
+    font-weight: bold;
+    text-align: center;
+    width: 300px;
+    height: 385px;
+    margin: 100px auto;
+    box-shadow: 1px 1px gray;
+    
+
+}
+
+.login{
+    padding-bottom: 20px;
+    font-size: 35px;
+}
+
+input{
+    background-color: white;
+    color: #707070;
+    padding: 5px;
+    border: 1px solid #707070;
+    border-radius: 5px;
+}
+
+.button{
+  border-radius: 5px;
+  color: black;
+  background-color: white;
+  border: none;
+  padding: 7px 55px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border: 1px solid black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+  
+.logout{
+    color: black;
+    text-decoration: underline;
+    padding-top: 10px;
+}
+
+.logout-text{
+  text-align: center;
+}
+
+a{
+  color: black;
+}
+
+.logout a {
+  color: black;
+  transition: font-size 1.5s
+}
+
+p{
+  color: red;
+}
+
+a:active, a:hover{
+  font-size: 17px;
+  color: #3b3332;
+}
+
+a{
+  transition: font-size 0.5s;
+  display: inline-block;
+  line-height: 17px;
+}
+
+
+
+
+.button:active, .button:hover{
+  font-size: 17px;
+  color: #3b3332;
+}
+
+.button{
+  transition: font-size 0.5s;
+  display: inline-block;
+  line-height: 15px;
+}
