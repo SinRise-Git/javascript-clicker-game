@@ -1,0 +1,46 @@
+a {
+    text-align: left;
+}
+body {
+    background-color: lightblue;
+}
+
+.clicker p {
+    font-size: 30px; 
+    font-weight: bolder;
+
+}
+h1{
+    text-align: center;
+}
+
+.logout{
+   margin-top: 240px ;
+   
+}
+
+.upgrade {
+    float: left;
+    
+}
+
+.div-grid{
+    display: grid;
+    grid-template-areas: 
+     'kolonne kolonne ' ;
+    grid-gap: 20px;
+    padding: 0px;
+    text-align: center;
+    padding: 0px;
+    margin: auto;
+    align-content: center;
+    width: 99%;
+    
+}
+img:active {
+    transform: scale(0.9);
+}
+img{
+    transition: ease-in-out 0.1s;
+    border-radius: solid 1px black;
+}

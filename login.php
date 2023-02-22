@@ -52,7 +52,7 @@ $Invalid = ("");
 <html>
 <head>
 	<title>Login</title>
-	<link rel="stylesheet" href="/javascript-clicker-game/css/style.css">
+	<link rel="stylesheet" href="/javascript-clicker-game/css/login.css">
 </head>
 <body>
 	<div id="box" class="box">
