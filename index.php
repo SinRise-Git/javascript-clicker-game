@@ -35,7 +35,7 @@ if (isset($_POST["score"])) {
   </div>
   <div class="upgrade">
      <h1>Upgrade Clicks</h1> 
-     <button onclick="UpgradeOne(100)"> -100 </button>
+     <button onclick="UpgradeOne()"> +1 (<span id ="score"><?php echo $user_data['upgrade1']; ?></span>) </button>
     </div>
   </div>
  </div> 

@@ -13,9 +13,9 @@ function addToScore() {
   xhr.send("score=" + score);
 }
 
-function UpgradeOne(amountRemove) {
+function UpgradeOne() {
  if (score >= 100) {
-  score -= amountRemove;
+  score -= 100;
   document.getElementById('score').innerHTML = score;
   //Sender den opptattert scoren til php scriptet
   var xhr = new XMLHttpRequest();
