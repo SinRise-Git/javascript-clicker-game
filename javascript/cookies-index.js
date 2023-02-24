@@ -1,5 +1,5 @@
 function addToScore() {
-  score += amount1 + 1;
+  score += amount1 + (amount10 * 10) + 1;
   document.getElementById('score').innerHTML = score;
   //Sender den opptattert scoren til php scriptet
   var xhr = new XMLHttpRequest();
@@ -15,7 +15,7 @@ function addToScore() {
 
 function Upgrade1() {
   if (score >= 100) {
-   score -= 100 ;
+   score -= 100;
    amount1 += 1
    document.getElementById('score').innerHTML = score;
    document.getElementById('amount1').innerHTML = amount1;
@@ -29,6 +29,25 @@ function Upgrade1() {
      }
    } 
    xhr.send("score=" + score + "&amount1=" + amount1);
-   return price
   }
  }
+ 
+function Upgrade10() {
+  if (score >= 1000) {
+   score -= 1000;
+   amount10 += 1
+   document.getElementById('score').innerHTML = score;
+   document.getElementById('amount10').innerHTML = amount10;
+   //Sender den oppdaterte scoren og amount10 til php scriptet
+   var xhr = new XMLHttpRequest();
+   xhr.open("POST", location.href, true);
+   xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+   xhr.onreadystatechange = function() {
+     if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+       console.log("You got another upgrade", amount10);
+     }
+   } 
+   xhr.send("score=" + score + "&amount10=" + amount10);
+  }
+ }
+
