@@ -10,8 +10,15 @@ body {
     font-weight: bolder;
 
 }
+h2{
+    text-align: center;
+    font-size: 30px;
+}
 h1{
     text-align: center;
+    font-size: 40px;
+    padding-bottom: 25px;
+    padding-top: 25px;
 }
 
 .logout{
@@ -27,20 +34,41 @@ h1{
 .div-grid{
     display: grid;
     grid-template-areas: 
-     'kolonne kolonne ' ;
-    grid-gap: 20px;
+     'kolonne kolonne konlonne';
     padding: 0px;
     text-align: center;
-    padding: 0px;
-    margin: auto;
-    align-content: center;
-    width: 99%;
+    margin: auto; /* new */
+    max-width: 800px; /* adjust to your desired maximum width */
+    grid-gap: 200px;
     
-}
+  }
+  
 img:active {
     transform: scale(0.9);
 }
 img{
     transition: ease-in-out 0.1s;
-    border-radius: solid 1px black;
+}
+
+.div-grid-u{
+    display: grid;
+    grid-template-areas: 
+     'kolonne kolonne konlonne ' ;
+    text-align: center;
+    align-content: center;    
+    grid-gap: -10px;
+    width: 300px;
+}
+
+.clicker{
+    border: 1px solid black;
+    height: 400px;
+    background-color: lightskyblue;
+    border-radius: 5px;   
+}
+.upgrade{
+    border: 1px solid black;
+    height: 400px;
+    background-color: lightskyblue;
+    border-radius: 5px;
 }
