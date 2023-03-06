@@ -7,13 +7,17 @@ body {
 }
   
 .clicker p {
-    font-size: 30px;
+    font-size: 13px;
     font-weight: bolder;
 }
-  
+
+
+
 h2 {
     text-align: center;
     font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
   
 h1 {
@@ -49,15 +53,7 @@ img {
     transition: ease-in-out 0.1s;
 }
   
-.div-grid-u {
-    display: grid;
-    grid-template-areas: "kolonne kolonne konlonne";
-    text-align: center;
-    align-content: center;
-    justify-items: center;
-    grid-gap: -10px;
-    padding: 0;
-}
+
   
 .clicker {
     border: 1px solid black;
@@ -74,3 +70,11 @@ img {
     border-radius: 5px;
 }
 
+.SCP {
+    font-size: 50px;
+}
+
+button{
+    padding: 10px;
+    margin: 15px;
+}
