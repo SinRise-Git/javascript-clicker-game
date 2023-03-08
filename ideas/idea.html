@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+           margin-top: 400px;
+        }
+    </style>
+</head>
+<body>
+     <h1>This is a test</h1>
+     <p>This is a test</p>
+    <button onclick="createMovingNumber()">Press-me</button>
+    <script>
+    function createMovingNumber() {
+        // Get the cursor position
+        const posX = event.clientX;
+        const posY = event.clientY;
+      
+        // Create a new element for the number
+        const numberElem = document.createElement("div");
+        numberElem.style.position = "absolute";
+        numberElem.style.left = `${posX - 25}px`;
+        numberElem.style.top = `${posY - 20}px`;
+        numberElem.style.opacity = 1,75;
+        numberElem.style.fontSize = "30px"
+        document.body.appendChild(numberElem);
+      
+        // Set the starting value of the number
+        let value = 10;  // Change to 10
+        
+        // Update the number and opacity on each interval
+        const interval = setInterval(() => {
+          numberElem.textContent =`+${value}` ;
+          numberElem.style.opacity -= 0.01;
+          numberElem.style.top = `${parseInt(numberElem.style.top) - 2}px`;
+      
+          if (numberElem.style.opacity <= 0) {
+            clearInterval(interval);
+            numberElem.remove();
+          }
+        }, 10);
+      }
+    </script>
+    
+</body>
+</html>

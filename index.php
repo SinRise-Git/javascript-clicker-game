@@ -71,7 +71,7 @@ if (isset($_POST["amount1000"])) {
   <div class="clicker"> 
    <h2>Score: <span id ="score"><?php echo $user_data['cookies']; ?></span></h2> 
    <p class="SPC">SPC: <span id="spc-verdi"> </p>
-   <img src="/javascript-clicker-game/images/clicker.png" height="270px" width="300px" onclick="addToScore();"> 
+   <img src="/javascript-clicker-game/images/clicker.png" height="270px" width="300px" onclick="addToScore(); creatFloatingNumbers(event);"> 
    <script>
    // Det går ikke å bruke i php echo i cookies-index.js av enn eller annnen grunn derfor er det her og ikke i cookies-index.js filen
    var score = <?php echo $user_data['cookies']; ?>;
@@ -88,6 +88,7 @@ if (isset($_POST["amount1000"])) {
       if (newSPC !== spc) {
          spc = newSPC;
          document.getElementById("spc-verdi").textContent = spc;
+         return spc
       }
    }
    

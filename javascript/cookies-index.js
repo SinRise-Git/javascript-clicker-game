@@ -4,8 +4,12 @@ let price100 = 10000
 let price1000 = 100000
 
 function addToScore() {
-  score += amount1 + (amount10 * 10) + (amount100* 100) + (amount1000 * 1000)+ 1;
+  score += amount1 + (amount10*10) + (amount100*100) + (amount1000*1000)+ 1;
   document.getElementById('score').innerHTML = score;
+  setInterval(function() {
+    var title = score
+    document.title = `Score: ${title}`;
+  }, 1);
   //Sender den opptattert scoren til php scriptet
   var xhr = new XMLHttpRequest();
   xhr.open("POST", location.href, true);
@@ -16,6 +20,36 @@ function addToScore() {
     }
   } 
   xhr.send("score=" + score);
+}
+
+function creatFloatingNumbers(event) {
+  //Finner positionen til musen
+  const posX = event.clientX;
+  const posY = event.clientY;
+
+  //Lager et ny element for tallet
+  const numberElem = document.createElement("div");
+  numberElem.style.position = "absolute";
+  numberElem.style.left = `${posX - 25}px`;
+  numberElem.style.top = `${posY - 20}px`;
+  numberElem.style.opacity = 1,75;
+  numberElem.style.fontSize = "30px"
+  document.body.appendChild(numberElem);
+
+  //Setter verdien til tallet
+  let value = spc;  
+  
+  //Sørger for at tallet beveger seg oppover og at opacityen blir mindre
+  const interval = setInterval(() => {
+    numberElem.textContent =`+${value}` ;
+    numberElem.style.opacity -= 0.01;
+    numberElem.style.top = `${parseInt(numberElem.style.top) - 2}px`;
+
+    if (numberElem.style.opacity <= 0) {
+      clearInterval(interval);
+      numberElem.remove();
+    }
+  }, 10);
 }
 
 function Upgrade1() {
