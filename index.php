@@ -62,8 +62,8 @@ if (isset($_POST["amount1000"])) {
 <html>
 <head>
   <title> Score: <?php echo $user_data['cookies']; ?></title>
-  <link rel="stylesheet" href="/javascript-clicker-game/css/cookie_index.css">
-  <script src="/javascript-clicker-game/javascript/cookies-index.js"></script>
+  <link rel="stylesheet" href="/javascript-clicker-game/css/cookie.index.css">
+  <script src="/javascript-clicker-game/javascript/cookie-index.js"></script>
 </head>
 <body>
 <h1>Amalie Skram Clicker</h1>
@@ -99,16 +99,16 @@ if (isset($_POST["amount1000"])) {
    <div class="upgrade">
      <h2>Upgrade Clicks</h2> 
         <div class="U1">
-         <button onclick="Upgrade1();">  +1 (<span id ="amount1"><?php echo $user_data['amount1']; ?></span>)</button>
+         <button id="upgrade1" onclick="Upgrade1();">(+1) - Price:(100) - Amount:(<span id ="amount1"><?php echo $user_data['amount1']; ?></span>)</button>
         </div>
         <div class="U10">
-         <button onclick="Upgrade10();">  +10 (<span id ="amount10"><?php echo $user_data['amount10']; ?></span>)</button>
+         <button id="upgrade10" onclick="Upgrade10();">(+10) - Price:(1000) - Amount:(<span id ="amount10"><?php echo $user_data['amount10']; ?></span>)</button>
         </div>
         <div class="U100">
-         <button onclick="Upgrade100();">  +100 (<span id ="amount100"><?php echo $user_data['amount100']; ?></span>)</button>        
+         <button id="upgrade100" onclick="Upgrade100();">(+100) - Price:(10000) - Amount:(<span id ="amount100"><?php echo $user_data['amount100']; ?></span>)</button>        
         </div>
         <div class="U1000">
-         <button onclick="Upgrade1000();">  +1000 (<span id ="amount1000"><?php echo $user_data['amount1000']; ?></span>)</button>
+         <button id="upgrade1000" onclick="Upgrade1000();">(+1000) - Price:(100000) - Amount:(<span id ="amount1000"><?php echo $user_data['amount1000']; ?></span>)</button>
         </div>
      </div>
    </div>

@@ -4,6 +4,10 @@
   
 body {
     background-color: lightblue;
+    background-image: url('/javascript-clicker-game/images/amalieskram.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
   
 .clicker p {
@@ -28,10 +32,13 @@ h1 {
 }
   
 .logout {
-    margin-top: 240px;
+    text-decoration: none;
+    color: black;
+    margin-top: 130px;
+    text-align: left;
 }
   
-.upgrade {}
+
   
 .div-grid {
     display: grid;
@@ -39,22 +46,21 @@ h1 {
     padding: 0px;
     text-align: center;
     margin: auto;
-    /* new */
     max-width: 800px;
-    /* adjust to your desired maximum width */
     grid-gap: 200px;
 }
-  
+
+img:hover{
+    transform: scale(1.05);
+}
 img:active {
     transform: scale(0.9);
 }
   
 img {
     transition: ease-in-out 0.1s;
+   
 }
-  
-
-  
 .clicker {
     border: 1px solid black;
     height: 400px;
@@ -77,4 +83,20 @@ img {
 button{
     padding: 10px;
     margin: 15px;
+    background-color: lightblue;
+    border-radius: 5px;
+    transition: ease-in-out 0.1s;
 }
+
+
+button:hover{
+    transform: scale(1.1);
+}
+
+button:active{
+    transform: scale(0.9);
+}
+
+.dimmed {
+    opacity: 0.5;
+  }
